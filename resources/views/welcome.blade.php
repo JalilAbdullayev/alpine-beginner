@@ -47,5 +47,27 @@
         </option>
     </select>
 </div>
+
+{{-- Show --}}
+<div x-data="{show: true}">
+    <button @click="show = !show">
+        Show Toggle
+    </button>
+    <div x-show="show">
+        This element will be shown or hidden based on the show value.
+    </div>
+</div>
+
+{{-- if  --}}
+<div x-data="{showIf: true}">
+    <button @click="showIf = !showIf">
+        If Toggle
+    </button>
+    <template x-if="showIf">
+        <div>
+            This element will be shown or hidden based on the show value.
+        </div>
+    </template>
+</div>
 </body>
 </html>
