@@ -24,5 +24,28 @@
     <img :class="{'hidden': !show}" :src="selectedImageURL" alt="" class="h-96 w-96"/>
     <input type="text" :value="inputValue" :style="{color: 'red'}"/>
 </div>
+
+{{-- Model --}}
+<div x-data="{message: 'Hello World'}">
+    <input type="text" x-model="message"/>
+    <p x-text="message" class="m-2 bg-slate-200 p-2"></p>
+</div>
+<div class="mx-auto max-w-md space-y-2" x-data="{myColor: 'slate'}">
+    <div class="h-24 w-24 rounded" :class="'bg-' + myColor + '-500'"></div>
+    <select x-model="myColor">
+        <option value="gray">
+            Gray
+        </option>
+        <option value="green">
+            Green
+        </option>
+        <option value="blue">
+            Blue
+        </option>
+        <option value="red">
+            Red
+        </option>
+    </select>
+</div>
 </body>
 </html>
