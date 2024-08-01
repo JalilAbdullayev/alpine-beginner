@@ -9,6 +9,11 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-
+<div x-data="{name: 'John Doe'}" class="m-4 rounded bg-green-400 p-4">
+    <span x-text="name"></span>
+</div>
+<div x-data="{message: 'Hello World'}" class="m-4 rounded bg-slate-200 p-4">
+    <span x-text="message"></span>
+</div>
 </body>
 </html>
